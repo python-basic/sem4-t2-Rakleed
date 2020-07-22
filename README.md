@@ -3,7 +3,7 @@
 - [ИСР № 2](#инвариативная-самостоятельная-работа--2)
     - [1 задание](#21-разработка-программы-калькулятор-выполняющей-базовые-арифметические-действия-и-функции-обёртки-для-логирования-операций)
     - [2 задание](#22-дополнение-программы-калькулятордекоратором-сохраняющим-выполнимые-действия-в-файл-журнал)
-    - [3 задание]
+    - [3 задание](#23-рефакторинг-программы-с-декоратором-модулем-functools-и-использование-его-функционала)
 - [ВСР № 2](#вариативная-самостоятельная-работа--2)
 
 # [Лабораторная работа № 5–6](https://repl.it/@Rakleed/programming4-lab5-6)
@@ -320,6 +320,34 @@ if __name__ == "__main__":
 
 # [Вариативная самостоятельная работа № 2](https://repl.it/@Rakleed/programming4-indepworkvar2)
 ```python
+"""
+    Автор: Моисеенко Павел, группа № 1, подгруппа № 2.
 
+    ВСР 2. Задание: разработать функцию-декоратор, вычисляющую время
+    выполнения декорируемой функции.
+
+"""
+
+from datetime import datetime
+
+
+def lead_time(func):
+    def wrapper():
+        start = datetime.now()
+        result = func()
+        print(datetime.now() - start)
+        return result
+    return wrapper
+
+
+@lead_time
+def number():
+    list_of_numbers = []
+    for i in range(10000):
+        list_of_numbers.append(i)
+    return list_of_numbers
+
+
+print(number())
 ```
 ![Result of indepworkvar2](src/programming4-indepworkvar2-result.png)
