@@ -119,6 +119,8 @@ def main():
 
 main()
 ```
+[file.db](src/file.db)
+
 ![Result of lab5-6](src/programming4-lab5-6-result.png)
 
 # Инвариативная самостоятельная работа № 2
