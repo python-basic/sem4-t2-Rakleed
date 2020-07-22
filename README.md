@@ -249,7 +249,7 @@ if __name__ == "__main__":
 ```
 ![Result of indepworkinvar2-2](src/programming4-indepworkinvar2-2-result.png)
 
-### [2.3. ](https://repl.it/@Rakleed/programming4-indepworkinvar2-3)
+### [2.3. Рефакторинг программы с декоратором-модулем functools и использование его функционала.](https://repl.it/@Rakleed/programming4-indepworkinvar2-3)
 ```python
 """
     Автор: Моисеенко Павел, группа № 1, подгруппа № 2.
